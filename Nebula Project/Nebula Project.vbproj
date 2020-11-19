@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Nebula_Project</RootNamespace>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="dotnetbrowser.license.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DotNetBrowser">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Chromium.Win-x64">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.Chromium.Win-x64.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Chromium.Win-x86">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.Chromium.Win-x86.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Core">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Logging">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.WinForms">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.WinForms.Demo">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.WinForms.Demo.exe</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Wpf">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Wpf.Demo">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\DotNetBrowser.Wpf.Demo.exe</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net.Reflection">
+      <HintPath>..\..\..\..\Downloads\dotnetbrowser-net45-2.2\Library\protobuf-net.Reflection.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="dotnetbrowser.license.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
